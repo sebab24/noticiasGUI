@@ -28,9 +28,6 @@ import webbrowser
 
 today = date.today()
 
-
-
-#import os
 import sys
 
 import os, subprocess
@@ -41,14 +38,7 @@ import threading
 
 global carpeta
 carpeta =  os.getcwd()
-#print(f'la carpeta es {os.getcwd()}')
-
 carpeta+='/'
-#print(f'la carpeta actual es :  {carpeta}')
-
-#carpetactual= os.system('pwd')
-#carpeta = "/home/seba/Documents/SEBA/24/NOTICIAS/"  # notebook 4
-# carpeta = "/home/seba/Documentos/NEWS/"    #notebook 6
 
 
 
@@ -69,8 +59,6 @@ root.geometry("1000x650")
 root.configure(bg="light blue", bd=5)
 #root.configure(bg='light green', bd=5)
 
-#nombre = StringVar()
-#numero = IntVar()
 
 #INCLUIMOS PANEL PARA LAS PESTANAS.
 nb = ttk.Notebook(root)
@@ -169,11 +157,6 @@ def SCRAPENOTICIAS(carpeta):
 	
 	now = datetime.now()  #Fecha actual
 	
-	#now= now.strftime("%Y%m%d%H%M%S")
-	
-	#print(today)
-	#print(now)
-	
 	
 	# Lee archivo URLs coloca cada linea a elementos de lista
 	URL  = open(carpeta+'URLs.txt','r')
@@ -219,31 +202,12 @@ def SCRAPENOTICIAS(carpeta):
 			print ("::::::::::::::URL = " + URL[i])
 			print ("")
 			
-			#print (soup)
+		
 			
 			titulares= soup.find_all('a')
 			
 			
-			'''
-			
-			#titulares= soup.find_all(target="_self")
-			#titulares= soup.find_all('span')#, attrs={'class':'tag'})
-			#links=titulares.find_all('href')
-			#titulares= soup.find_all('h1')
-			#titulares= soup.find_all('a', 'href')#, attrs={'class':'contenedor-titulo'})
-			#seguidores2= soup.find('meta', attrs={'property':'og:description'})
-			#seguidores3= soup.find('meta', attrs={'name':'description'})
-			
-			
-			#print (titulares)
-			
-			#titulo= soup.title.string
-			#print (titulo)
-			
-								  		
-			#print(soup.get_text())
-			
-			'''
+	
 			
 			eliminarepetidos(titulares)
 		
@@ -255,16 +219,11 @@ def SCRAPENOTICIAS(carpeta):
 			f.write('\n')
 	
 			try:
-				
-				
-				
+			
 				for titulares in titulares:
-					
-		
+	
 					#f.write(f'{titulares} \n')
 					
-					
-						
 					if titulares.string != None:
 						titulo=titulares.string.split()
 						
@@ -300,7 +259,6 @@ def SCRAPENOTICIAS(carpeta):
 	
 	
 	f.write("::::::::::::::::::::FIN DE LOS TITULARES DE FECHA " + str(today)+ "::::::::::::::::::::::")
-	
 	f.close()
 	
 	
@@ -310,14 +268,12 @@ def SCRAPENOTICIAS(carpeta):
 	f  = open(carpeta+'TITULARES.txt','r')
 	
 	lineas= f.readlines()
-	
-	
-	
+
 	eliminarepetidos(lineas)
 		
 	f.close()
-	#os.system('rm '+carpeta+'TITULARES.txt')  #comando en linux
-	os.system(f'del TITULARES.txt')    #comandon en windows
+	os.system('rm '+carpeta+'TITULARES.txt')  #comando en linux
+	#os.system(f'del TITULARES.txt')    #comandon en windows
 	
 	
 	
@@ -356,15 +312,13 @@ def ACTUALIZARURL():
 			
 		MARCO1.borrar()
 		MARCO1.textoOUT(mensaje)
-		#T1.delete('1.0', END)
-		#T1.insert(END, mensaje)
+	
 		print ('URL ACTUALIZADO')
 	
 	except:
 		MARCO1.borrar()
 		MARCO1.textoOUT('TEMA')
-		#T1.delete('1.0', END)
-		#T1.insert(END, 'TEMA ')
+	
 	
 
 
@@ -372,7 +326,7 @@ def ACTUALIZARTITULARES():
 	
 	try:
 		TITULARESLISTADO=open(carpeta+'TITULARES-'+str(today)+'.txt','r')
-		#TITULARESLISTADO=open('TITULARES-'+str(today)+'.txt','r')
+	
 		textotitulares=""
 		
 		MARCO2.borrar()
@@ -382,14 +336,12 @@ def ACTUALIZARTITULARES():
 		for line in TITULARESLISTADO:
 			cucu+=line
 		MARCO2.textoOUT(cucu)
-		#T2.insert(END, cucu)
-		#print ('TITULARES ACTUALIZADOS')
+	
 	
 	except:
 		MARCO2.borrar()
 		MARCO2.textoOUT('No hay titulares disponibles de hoy')
-		#T2.delete('1.0', END)
-		#T2.insert(END, 'No hay titulares disponibles de hoy')
+	
 
 
 
@@ -453,43 +405,20 @@ Button(root, text='CARGAR URLs-TITULARES',bg='light blue',command=CARGARURL).pla
 
 def NEWS():
 	
-	#GUARDAR()
+	
 	
 	Label(p1, text='BUSCANDO TITULARES', bg = 'white').place(x=500, y=50)
 	
-	#ACTUALIZARURL()
-	
-	#LEER URL DESDE T1, Y OK(EXPORTAR RESULTADOS A ARCHIVO TITULARES, Y ACTUALIZAR CUADRO EN PESTANA 2). 
-	
-	#subprocess.Popen(['python3', 'scrapeNOTICIAS.py'])
+
 	SCRAPENOTICIAS(carpeta)
 	
-	#os.system('python3 '+carpeta+'scrape-NOTICIAS.py')
+	
 	
 	
 	
 	Label(p1, text='TITULARES ACTUALIZADOS', bg = 'white').place(x=500, y=50)
 Button(root, text='NEWS',bg='light green',command=NEWS).place(x=300, y=50)
 
-
-
-"""		
-	#quote3 = str(textotitulares)
-	#print (quote3)
-	#T2.delete('1.0', END)
-	#T2.insert(END, quote3)
-
-
-
-
-
-#TITULOS=open("TITULARES-"+str(today)+".txt",'r')
-#tituloslista=""
-
-#for line in TITULOS:
-#	tituloslista+=" "+line
-
-"""
 
 
 MARCO2=MARCO(p2)
@@ -583,24 +512,6 @@ S3.config(command=T3.yview)
 T3.config(yscrollcommand=S3.set)
 
 
-# quote = """HAMLET: To be, or not to be--that is the question:
-# Whether 'tis nobler in the mind to suffer
-# The slings and arrows of outrageous fortune
-# Or to take arms against a sea of troubles
-# And by opposing end them. To die, to sleep--
-# No more--and by a sleep to say we end
-# The heartache, and the thousand natural shocks
-# That flesh is heir to. 'Tis a consummation
-# Devoutly to be wished."""
-
-#quote3 = textoleer
-
-#T3.insert(Tkinter.END, quote3)
-
-
-
-
-
 
 
 Label(p3, text='INGRESA URL PARA LEER').place(x=100, y=100)
@@ -631,132 +542,13 @@ Button(p3, text='TRAE TEXT0',bg='light blue',command=TRAETEXTO).place(x=720,y=95
 '''
 
 
-
 root.mainloop()
-
-
 
 
 #-------------FIN PROGRAMA 
 
 
 
-
-"""
-
-Label(p5, bg="light blue", text="COMANDOS VOZ:   \n PRENDE/APAGA   (LUZ 1;  LED 2;  ZUMBIDO)  \n  ABRE/CIERRA   (VLC;  FLORENCE) \n TERMINAR \n APAGAR COMPUTADOR", relief=RIDGE).place(x=200, y=20)
-
-
-Label(p5, text="Dijiste = ").place(x=100, y=180)
-
-
-
-
-
-  
-np.savetxt(carpeta+'valores.py', valores, fmt='%1.1f  ')
-
-def BRILLO1mas():
-  if valores[2,0]<5 :
-      valores[2,0]=valores[2,0]+0.1
-  os.system('xrandr --output VGA-1 --brightness '+str(valores[2,0]))
-  Label(p2, text=round(valores[2,0],2)).place(x=380, y=posicion1BRILLO)
-  np.savetxt(carpeta+'valores.py', valores, fmt='%1.1f  ')
-
-def BRILLO1menos():
-  if valores[2,0]>0.2 :
-      valores[2,0]=valores[2,0]-0.1
-  os.system('xrandr --output VGA-1 --brightness '+str(valores[2,0]))
-  Label(p2, text=round(valores[2,0],2)).place(x=380, y=posicion1BRILLO)
-  np.savetxt(carpeta+'valores.py', valores, fmt='%1.1f  ')
-
-
-def GAMMA1mas():
-  if valores[2,1]<5 :
-      valores[2,1]=valores[2,1]+0.1
-
-  b=str(valores[2,1])
-  os.system('xrandr --output VGA-1 --gamma '+b+':'+b+':'+b)
-  Label(p2, text=round(valores[2,1],2)).place(x=380, y=posicion1GAMMA)
-  np.savetxt(carpeta+'valores.py', valores, fmt='%1.1f  ')
-
-
-
-  Label(p2, text=round(valores[2,1],2)).place(x=380, y=posicion1GAMMA)
-  np.savetxt(carpeta+'valores.py', valores, fmt='%1.1f  ')
-
-
-def BRILLO2mas():
-  if valores[3,0]<5 :
-      valores[3,0]=valores[3,0]+0.1
-  os.system('xrandr --output eDP-1 --brightness '+str(valores[3,0]))
-  Label(p2, text=round(valores[3,0],2)).place(x=380, y=posicion2BRILLO)
-  np.savetxt(carpeta+'valores.py', valores, fmt='%1.1f  ')
-
-
-
-def BRILLO2menos():
-  if valores[3,0]>0.2 :
-      valores[3,0]=valores[3,0]-0.1
-  os.system('xrandr --output eDP-1 --brightness '+str(valores[3,0]))
-  Label(p2, text=round(valores[3,0],2)).place(x=380, y=posicion2BRILLO)
-  np.savetxt(carpeta+'valores.py', valores, fmt='%1.1f  ')
-
-def GAMMA2mas():
-  if valores[3,1]<5 :
-      valores[3,1]=valores[3,1]+0.1
-  b=str(valores[3,1])
-  os.system('xrandr --output eDP-1 --gamma '+b+':'+b+':'+b)
-  Label(p2, text=round(valores[3,1],2)).place(x=380, y=posicion2GAMMA)
-  np.savetxt(carpeta+'valores.py', valores, fmt='%1.1f  ')
-
-
-
-def GAMMA2menos():
-  if valores[3,1]>0.2 :
-      valores[3,1]=valores[3,1]-0.1
-  b=str(valores[3,1])
-  os.system('xrandr --output eDP-1 --gamma '+b+':'+b+':'+b)
-  Label(p2, text=round(valores[3,1],2)).place(x=380, y=posicion2GAMMA)
-  np.savetxt(carpeta+'valores.py', valores, fmt='%1.1f  ')
-
-
-
-
-
-# IMAGENES 
-#ampolletaON = PhotoImage(file = r"ampolletaON.png")
-#ampON = ampolletaON.subsample(2, 2)
-#ampolletaOFF = PhotoImage(file = r"ampolletaOFF.png")
-#ampOFF = ampolletaOFF.subsample(2, 2)
-
-
-#camaON = PhotoImage(file = r"camaON.png")
-#camON = camaON.subsample(8, 8)
-#camaOFF = PhotoImage(file = r"camaOFF.png")
-#camOFF = camaOFF.subsample(8, 8)
-
-
-
-
-#CARPETA LOCAL
-
-#carpeta="/home/seba/Documents/SEBA/24/CONTROLPIEZA/" #Notebook 8
-#carpeta="/home/sebab/Documents/SEBAB-mint/24/PYTHON/PIEZA/" # Notebook 3
-
-carpeta="/home/seba/Descargas/" #Notebook 6
-
-#CONEXION A RASPBERRY
-RPI1= 'sshpass -p "a" ssh pi@192.168.43.72'  #RPI3 EN AGUA
-#RPI1= 'sshpass -p "a" ssh pi@192.168.1.51'  #RPI3 EN AGUA?
-
-
-INICIO MEMORIA ESTADOS
-
-valores= np.loadtxt(carpeta+'valores.py')
-
-
-"""
 
 
 
