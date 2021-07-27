@@ -60,7 +60,7 @@ root.configure(bg="light blue", bd=5)
 #root.configure(bg='light green', bd=5)
 
 
-#INCLUIMOS PANEL PARA LAS PESTANAS.
+#PANEL PESTANAS
 nb = ttk.Notebook(root)
 #nb.configure(bg="ligth blue", bd=5)
 nb.pack(fill='both',expand='yes')
@@ -73,7 +73,7 @@ p2 = ttk.Frame(nb)
 #p3 = ttk.Frame(nb)
 #p4 = ttk.Frame(nb)
 
-#TITULO A PESTANAS 
+#TITULO PESTANAS 
 nb.add(p1,text='URLs')
 nb.add(p2,text='TITULARES')
 #nb.add(p3,text='TEXTO A VOZ')
@@ -127,8 +127,6 @@ MARCO1.dibuja()
 
 
 
-
-
 def eliminarepetidos(lista):
 	i=0
 			
@@ -175,9 +173,6 @@ def SCRAPENOTICIAS(carpeta):
 	f = open(carpeta+'TITULARES.txt','a')
 	
 	
-	
-			
-	
 	for i in range (len(URL)):
 		try: 
 			
@@ -194,24 +189,18 @@ def SCRAPENOTICIAS(carpeta):
 			soup = BeautifulSoup(src, 'lxml')
 			
 			
-		
-			
 			print ("")
 			print ("::::::::::::::"+str(temanuevo))
 			print ("::::::::::::::BUSCANDO TITULARES DE |  "+soup.title.string)
 			print ("::::::::::::::URL = " + URL[i])
 			print ("")
 			
-		
 			
 			titulares= soup.find_all('a')
 			
-			
-	
-			
-			eliminarepetidos(titulares)
 		
-			
+			eliminarepetidos(titulares)
+				
 			f.write('\n' )
 			f.write('\n' + "::::::::::::::"+str(temanuevo))
 			f.write('\n' + ":::::::::::FECHA = " + str(today))
@@ -262,8 +251,7 @@ def SCRAPENOTICIAS(carpeta):
 	f.close()
 	
 	
-	
-	# Formatea Titulares, elimina espacios en blanco o repeticiones.
+	# Formatea Titulares, elimina espacios en blanco ,repeticiones.
 	
 	f  = open(carpeta+'TITULARES.txt','r')
 	
@@ -274,7 +262,6 @@ def SCRAPENOTICIAS(carpeta):
 	f.close()
 	os.system('rm '+carpeta+'TITULARES.txt')  #comando en linux
 	#os.system(f'del TITULARES.txt')    #comandon en windows
-	
 	
 	
 	#Exporta Titulares formateados y con fecha
@@ -297,14 +284,12 @@ def SCRAPENOTICIAS(carpeta):
 	print ("")
 
 
-
 def ACTUALIZARURL():
 	
 	try:
 		URL= open(carpeta+'URLs.txt','r')
 		print (f'LA CARPETA DE URL ES {carpeta}URLs.txt')
-		
-		
+				
 		mensaje=""
 	
 		for line in URL:
@@ -320,7 +305,6 @@ def ACTUALIZARURL():
 		MARCO1.textoOUT('TEMA')
 	
 	
-
 
 def ACTUALIZARTITULARES():
 	
@@ -346,12 +330,6 @@ def ACTUALIZARTITULARES():
 
 
 
-
-
-
-
-
-
 def STOP():
     os.system('echo salida')
     #os.system('SYSTEMINFO')
@@ -372,11 +350,7 @@ def GUARDAR():
 Button(p1, text='GUARDAR',bg='yellow',command=GUARDAR).place(x=200,y=100)
 
 
-
-
 Label(p1, text='INGRESA URLs PARA LEER').place(x=400, y=120)
-
-
 
 
 def CARGARURL():
@@ -391,39 +365,24 @@ Button(root, text='CARGAR URLs-TITULARES',bg='light blue',command=CARGARURL).pla
 
 
 
-
-
-
-
-
 # --------------------PESTANA 2  -----TITULARES----------------
 
 
 
-
-
-
 def NEWS():
-	
-	
+
 	
 	Label(p1, text='BUSCANDO TITULARES', bg = 'white').place(x=500, y=50)
 	
-
 	SCRAPENOTICIAS(carpeta)
-	
-	
-	
-	
+
 	
 	Label(p1, text='TITULARES ACTUALIZADOS', bg = 'white').place(x=500, y=50)
 Button(root, text='NEWS',bg='light green',command=NEWS).place(x=300, y=50)
 
 
-
 MARCO2=MARCO(p2)
 MARCO2.dibuja()
-
 
 
 def ABREWEB():
@@ -434,17 +393,11 @@ def ABREWEB():
 Button(p2, text='ABRE WEB',bg='light blue',command=ABREWEB).place(x=800,y=95)
 
 
-
 Label(p2, text='INGRESA URL PARA ABRIR WEB').place(x=80, y=100)
 webver= Entry(p2, width=50)
 webver.place(x=300,y=100)
 
 query=webver.get()
-
-
-
-
-
 
 
 
@@ -467,14 +420,10 @@ Button(p3, text='LEERVOZ',bg='yellow',command=LEERVOZ).place(x=500,y=50)
 
 
 
-
-
 def BORRA():
 	pass
 	T3.delete('1.0', END)
 Button(p3, text='BORRA',bg='light green',command=BORRA).place(x=850, y=95)
-
-
 
 
 
@@ -498,8 +447,6 @@ frame3.place(x=100, y=150)
 
 
 
-
-
 #CUADRO DE SCROLL URL 
 
 
@@ -510,7 +457,6 @@ S3.pack(side=Tkinter.RIGHT, fill=Tkinter.Y)
 T3.pack(side=Tkinter.LEFT, fill=Tkinter.Y)
 S3.config(command=T3.yview)
 T3.config(yscrollcommand=S3.set)
-
 
 
 
