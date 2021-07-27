@@ -22,4 +22,11 @@ de forma rapida, evitando banners, publicidad, o perder tiempo visitando una por
 
 es similar a un RSS, 
 
+próximo: haré un video youtube en mi canal, mostrando cómo se usa.(aún no lo hago) 
+https://www.youtube.com/channel/UCYFcZID2dDyMAOloY_5p5uw
+
+sebabucc24@gmail.com
+
+
+
 
