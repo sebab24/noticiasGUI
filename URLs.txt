@@ -1,0 +1,136 @@
+
+TEMA = 1 NOTICIAS CHILE
+  
+
+https://www.emol.com
+https://www.24horas.cl
+https://www.meganoticias.cl
+https://www.radioagricultura.cl
+https://www.df.cl
+https://www.elvillegas.cl/blog
+https://www.pauta.cl
+https://www.ciperchile.cl
+   
+TEMA = 2 NOTICIAS INTERNACIONAL
+https://www.cooperativa.cl/noticias/mundo
+https://cnnespanol.cnn.com
+https://www.bbc.com
+   
+
+TEMA = 3 SICOLOGIA
+https://lamenteesmaravillosa.com
+https://psicologiaymente.com
+https://www.psyciencia.com
+
+
+#TEMA = 4 CONCURSOS 
+#https://www.escritores.org/recursos-para-escritores/concursos-literario/7295-concursos-literarios-chile
+
+TEMA = 5 CONFERENCIAS 
+https://www.uchile.cl/agenda/conferencias_y_seminarios
+https://www.ing.uc.cl/eventos
+https://www.ingenieros.cl/events/lista
+
+
+
+TEMA = 6 PYTHON
+https://www.genbeta.com/tag/python
+http://www.pythondiario.com
+https://j2logo.com
+https://hipertextual.com/archivo/tag/python
+https://planetpython.org
+https://www.sciencenews.org/topic/computing
+ 
+TEMA = 7 LINUX
+https://www.muylinux.com/noticias
+https://www.linuxadictos.com/category/noticias
+
+
+TEMA = 8 RASPBERRY PI 
+https://www.xatakahome.com/tag/raspberry-pi
+https://blog.bricogeek.com/noticias/raspberry-pi
+https://www.raspberryshop.es/wp
+https://www.raspberrypi.org/blog
+
+
+TEMA = 9 TECNOLOGIA
+https://www.pauta.cl/pauta/site/tax/port/all/taxport_11___1.html
+https://www.xataka.com/tag/tecnologia
+https://www.eitb.eus/es/noticias/tecnologia
+https://computerhoy.com/noticias
+https://cnnespanol.cnn.com/seccion/tecnologia
+https://www.bbc.com/mundo/topics/cyx5krnw38vt
+https://www.abc.es/tecnologia
+https://www.investigacionyciencia.es/materias/tecnologia
+ 
+TEMA =10 INVENTOS
+https://www.inapi.cl/sala-de-prensa/noticias/todas-las-noticias
+http://ingenieria.uchile.cl/noticias-facultad
+https://www.propiedadintelectual.gob.cl/sitio/Contenido/Noticias/
+   
+
+ 
+   
+TEMA = 11 CIENCIA
+https://www.cienciaenchile.cl
+https://innovacionchilena.cl
+# http://www.innovacion.cl
+http://www.cifchile.cl/noticias-de-innovacion
+https://cnnespanol.cnn.com/category/ciencia
+ 
+TEMA = 12 SCIENCE IN ENGLISH
+https://www.nature.com
+https://www.scientificamerican.com
+https://www.nytimes.com/section/science
+https://www.sciencenews.org
+ 
+   
+
+
+
+
+
+TEMA = 13 BIOTECNOLOGIA
+https://elpais.com/noticias/biotecnologia
+https://cadenaser.com/tag/biotecnologia/a
+http://biotech-spain.com/es/articles
+https://www.elespanol.com/temas/biotecnologia
+https://www.scidev.net/america-latina/empresa/biotecnologia
+https://www.biotechmagazine.es
+   
+TEMA = 14 MATEMATICAS 
+https://www.investigacionyciencia.es/materias/matematicas
+ 
+TEMA = 15 AJEDREZ
+https://es.chessbase.com/
+https://chess24.com/es/informate/noticias
+https://www.marca.com/ajedrez.html
+https://as.com/tag/ajedrez/a/
+https://www.chess.com/es/news
+ 
+
+TEMA = 16 IGLESIA
+http://www.iglesia.cl/noticias.php
+   
+TEMA = 17 AUTISMO 
+https://autismodiario.com
+https://aittea.autismosevilla.org
+https://elsonidodelahierbaelcrecer.blogspot.com
+http://www.fundacionorange.es/junto-al-autismo
+http://aetapi.org
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
