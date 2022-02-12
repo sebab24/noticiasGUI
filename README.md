@@ -1,5 +1,17 @@
 # noticiasGUI
+12 Febrero 2022, 
+VERSION 8 
+en esta versión, agregué pestaña de 
+palabras blacklist, para eliminar/filtrar titulares que incluyan palabra en blacklist (gol, futbol, goleada, ... etc, para los que no les interesa el futbol), 
 
+y otra pestaña de whitelist, : en donde solo muestra /filtra titulares que SÍ incluyen dicha(s) palabras, (asi permite seleccionar solo titulas que incluyan palabras en whitelist), 
+
+
+
+
+
+
+VERSION 2
 ESTE CODIGO, es una app, de escritorio escrita en PYTHON., 
 
 Permite, ingresar en una ventana grafica URLs de : web, blogs, diarios, revistas, etc, 
@@ -24,6 +36,7 @@ es similar a un RSS,
 
 próximo: haré un video youtube en mi canal, mostrando cómo se usa.(aún no lo hago) 
 https://www.youtube.com/channel/UCYFcZID2dDyMAOloY_5p5uw
+
 
 sebabucc24@gmail.com
 
