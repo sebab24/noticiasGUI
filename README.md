@@ -1,14 +1,20 @@
 # noticiasGUI
+
+9 March 2022, 
+VERSION 9 
+this version 9, added a better/improved : 
+-'blacklist filter tab', (to block words(in title or url,  without interest to be read)
+and 
+-a 'whitelist filter tab', to read only titles /news including the words in the whitelist. 
+also, a few improvements/simplyfications in code. 
+
+
+
 12 Febrero 2022, 
 VERSION 8 
 en esta versión, agregué pestaña de 
 palabras blacklist, para eliminar/filtrar titulares que incluyan palabra en blacklist (gol, futbol, goleada, ... etc, para los que no les interesa el futbol), 
-
 y otra pestaña de whitelist, : en donde solo muestra /filtra titulares que SÍ incluyen dicha(s) palabras, (asi permite seleccionar solo titulas que incluyan palabras en whitelist), 
-
-
-
-
 
 
 VERSION 2
