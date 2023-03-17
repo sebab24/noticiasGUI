@@ -1,5 +1,20 @@
 # noticiasGUI
 
+17 March 2023,
+VERSION 16
+This version 16, added, a "AND" in white list, it is using a ';' separator
+example
+in whitelist write
+economia;chile
+this will find all titulares containing the words "economia" AND "chile". 
+
+also, added,  "borrar" button in the tituares tab. 
+
+
+
+
+
+
 9 March 2022, 
 VERSION 9 
 this version 9, added a better/improved : 
