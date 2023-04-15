@@ -59,7 +59,7 @@ próximo: haré un video youtube en mi canal, mostrando cómo se usa.(aún no lo
 https://www.youtube.com/channel/UCYFcZID2dDyMAOloY_5p5uw
 
 
-sebabucc24@gmail.com
+
 
 
 
