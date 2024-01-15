@@ -1670,7 +1670,7 @@ def p11_BORRA_RESUMEN_youtube():
 maxcaracteres = 2500
 
 
-openai.api_key = "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"
+openai.api_key = "sk-........."
 
 
 #contexto='Lo siguiente es una transcripción de un video:'
