@@ -83,8 +83,7 @@ pygame.mixer.init()
 
 
 global carpeta
-carpeta =  os.getcwd()+ '/'
-
+carpeta =  os.getcwd()+ '/'ke
 #print(f'la carpeta actual es :  {carpeta}')
 
 #carpetactual= os.system('pwd')
@@ -1500,7 +1499,7 @@ maxcaracteres = 2000
 
 def PREGUNTAGPT(pregunta):
 	
-	openai.api_key = "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"
+	openai.api_key = "sk-............"
 	contexto='Lo siguiente es un resumen'
 
 	promt=''
