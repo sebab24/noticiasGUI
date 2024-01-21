@@ -1675,7 +1675,7 @@ openai.api_key = "sk-..."
 
 
 #contexto='Lo siguiente es una transcripción de un video:'
-#contexto='Transcripción de un video de Francisco Muñoz'
+#contexto='Transcripción de un video'
 contexto='Transcripción de un video '
 promt=''
 estilo= ''
