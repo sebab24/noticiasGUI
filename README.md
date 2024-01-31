@@ -4,7 +4,7 @@ VERSION 21_2_sinclave
 this version 21_2, 
 added, a :
 -tab for T2S(text to speech), 
--tab for resume of texts, using gpt, (api kei sk-..., should be added in the code)
+-tab for resume of texts, using gpt, (api key sk-..., should be added in the code)
 -tab for resume of youtube video link, 
 
 
